@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+$tablet: 700px;
+$desktop: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}

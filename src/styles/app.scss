@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'card';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $card_gap;
+    padding: 20px;
+    margin: 0 auto;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+    }
+}

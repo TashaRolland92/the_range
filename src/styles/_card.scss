@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.product_card {
+    display: flex;
+    padding: 16px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $color_border;
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    h2 {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .price {
+        margin: 4px 0;
+    }
+
+    .was_price {
+        color: $color_red;
+        margin-right: 8px;
+        text-decoration: line-through;
+    }
+
+    .reviews {
+        margin: 4px 0;
+        color: $color_green;
+    }
+
+    .add_to_basket {
+        width: 100%;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: auto;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: $color_orange;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
