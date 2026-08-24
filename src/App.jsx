@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Spinner from './components/Spinner';
 import ProductCard from './components/ProductCard';
 import SortControls from './components/SortControls';
 
@@ -58,7 +59,7 @@ function App() {
         setActiveSort((current) => (current === sortKey ? null : sortKey));
     };
     
-    if (loading) return <p>Loading products...</p>;
+    if (loading) return <Spinner />;
     if (error) return <p>Something went wrong: {error}</p>;
 
     return (
