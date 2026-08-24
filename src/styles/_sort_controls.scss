@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.sort_controls {
+    display: grid;
+    gap: $card_gap;
+    margin-bottom: 10px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

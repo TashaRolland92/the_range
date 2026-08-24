@@ -23,28 +23,14 @@
     }
 
     .was_price {
+        display: flex;
         color: $color_red;
-        margin-right: 8px;
+        margin-bottom: 4px;
         text-decoration: line-through;
     }
 
     .reviews {
         margin: 4px 0;
         color: $color_green;
-    }
-
-    .add_to_basket {
-        width: 100%;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        margin-top: auto;
-        color: #ffffff;
-        font-weight: bold;
-        background-color: $color_orange;
-
-        &:hover {
-            opacity: 0.9;
-        }
     }
 }
