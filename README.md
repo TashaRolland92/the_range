@@ -1,16 +1,36 @@
-# React + Vite
+# The Range
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive product listing app built with React and a PHP headless API. 
 
-Currently, two official plugins are available:
+## Stack
+- React (Vite)
+- SASS
+- PHP (procedural, no framework)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Run Locally
+This needs two servers running at once, in two separate terminals/tabs. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Terminal/Tab 1 - PHP API:
 
-## Expanding the ESLint configuration
+Navigate to the root folder the_range and run: `php -S localhost:8000`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Terminal/Tab 2 - React App:
+
+Navigate to react_app and run: `npm install && npm run dev`
+
+Then visit the URL Vite prints (usually `http://localhost:5173`).
+
+## Notes
+
+- Prices in the source data are stored in pence and formatted to £ in the UI.
+- Products missing a review score or was_price simply omit that element, per the brief.
+- Sorting is always ascending; clicking an active sort button again clears it.
+- Responsive breakpoints: 1 column below 375px, 2 from 375px, 3 from 700px, 4 from 1200px+.
+
+
+
+
+
+
+
