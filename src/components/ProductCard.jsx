@@ -8,7 +8,7 @@ function ProductCard({ product }) {
             <p className="price">
                 {product.was_price && (
                     <span className="was_price">
-                        {formatPrice(product.was_price)}
+                        Was {formatPrice(product.was_price)}
                     </span>
                 )}
 

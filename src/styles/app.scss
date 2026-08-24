@@ -1,6 +1,8 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'buttons';
 @use 'card';
+@use 'sort_controls';
 
 * {
     box-sizing: border-box;
@@ -11,12 +13,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.product_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $card_gap;
+.container {
     padding: 20px;
     margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product_grid {
+    display: grid;
+    gap: $card_gap;
+    grid-template-columns: repeat(2, 1fr);
 
     @include tablet {
         grid-template-columns: repeat(3, 1fr);
@@ -24,6 +30,5 @@ body {
 
     @include desktop {
         grid-template-columns: repeat(4, 1fr);
-        max-width: 1200px;
     }
 }
