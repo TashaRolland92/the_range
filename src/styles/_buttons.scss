@@ -2,13 +2,13 @@
 
 .btn {
 	width: 100%;
-	border: none;
 	padding: 10px;
 	color: #FFF;
 	cursor: pointer;
     font-size: 14px;
 	font-weight: bold;        
     background-color: #FFF;
+	border: 1px solid transparent;
     
 	&:hover {
         opacity: 0.9;

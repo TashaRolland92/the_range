@@ -1,7 +1,14 @@
 @use 'variables' as *;
 
+$mobile_lg: 375px;
 $tablet: 700px;
 $desktop: 1200px;
+
+@mixin mobileLg {
+    @media (min-width: #{$mobile_lg}) {
+        @content;
+    }
+}
 
 @mixin tablet {
     @media (min-width: #{$tablet}) {
