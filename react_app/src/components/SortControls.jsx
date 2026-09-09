@@ -12,6 +12,7 @@ function SortControls({ activeSort, onSortChange }) {
                 <button
                     key={option.key}
                     className={`btn sort_btn ${activeSort === option.key ? 'active' : ''}`}
+                    aria-pressed={activeSort === option.key}
                     onClick={() => onSortChange(option.key)}
                 >
                     {option.label}
